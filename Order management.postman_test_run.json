@@ -1,0 +1,138 @@
+{
+	"id": "4ab133db-2f2f-4873-9b4f-63f2482b1e07",
+	"name": "Order management",
+	"timestamp": "2022-08-29T15:52:12.676Z",
+	"collection_id": "21748443-0c66d62d-8dc0-4c24-9fc6-defa383e2626",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 8,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "647a6e1c-3c4f-430e-a3b6-d37fe06b8f73",
+			"name": "generate referance",
+			"time": 271,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				681,
+				271
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2ce9f807-d956-4233-b602-a8879dd465c6",
+			"name": "create order",
+			"time": 273,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"should contain the reference id": false,
+				"should contain the customer id": true,
+				"should contain the product id": true
+			},
+			"testPassFailCounts": {
+				"should contain the reference id": {
+					"pass": 0,
+					"fail": 2
+				},
+				"should contain the customer id": {
+					"pass": 2,
+					"fail": 0
+				},
+				"should contain the product id": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				274,
+				273
+			],
+			"allTests": [
+				{
+					"should contain the reference id": false,
+					"should contain the customer id": true,
+					"should contain the product id": true
+				},
+				{
+					"should contain the reference id": false,
+					"should contain the customer id": true,
+					"should contain the product id": true
+				}
+			]
+		},
+		{
+			"id": "0f24564d-c3e7-4250-98dd-c0ebd632669c",
+			"name": "Check status",
+			"time": 274,
+			"responseCode": {
+				"code": 500,
+				"name": "INTERNAL SERVER ERROR"
+			},
+			"tests": {
+				"Status code is500": true
+			},
+			"testPassFailCounts": {
+				"Status code is200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is500": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273,
+				274
+			],
+			"allTests": [
+				{
+					"Status code is200": true
+				},
+				{
+					"Status code is500": true
+				}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 2046,
+	"collection": {
+		"requests": [
+			{
+				"id": "647a6e1c-3c4f-430e-a3b6-d37fe06b8f73",
+				"method": "GET"
+			},
+			{
+				"id": "2ce9f807-d956-4233-b602-a8879dd465c6",
+				"method": "POST"
+			},
+			{
+				"id": "0f24564d-c3e7-4250-98dd-c0ebd632669c",
+				"method": "GET"
+			}
+		]
+	}
+}
